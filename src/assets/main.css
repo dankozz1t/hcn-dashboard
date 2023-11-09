@@ -1,17 +1,63 @@
-@import "./base.css";
+:root {
+  --main-font: "Montserrat", sans-serif;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  --text-selection-color: #fafafa;
+  --bg-selection-color: #240202;
 
+  --transition-time: 350ms;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+body {
+  font-family: var(--main-font);
+  position: relative;
+
+  color: white;
+
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+
+  background: url("juggernaut-dota.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 2vh;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    background-color: var(--COLOR_HIGHLIGHT_PRIMARY_1);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--COLOR_HIGHLIGHT_PRIMARY_4);
+  }
+}
+
+::selection {
+  color: var(--text-selection-color);
+  background-color: var(--bg-selection-color);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
   font-weight: normal;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+#app {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem;
 }
 

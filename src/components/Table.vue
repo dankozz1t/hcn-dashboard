@@ -1,48 +1,40 @@
 <template>
-  <table>
-    <thead>
-      <tr>
-        <th>Global Rank</th>
-        <th>Nickname</th>
-        <th>Rating</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="(player, index) in players" :key="index">
-        <td>{{ player[0] }}</td>
-        <td>{{ player[1] }}</td>
-        <td>{{ player[2] }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div>
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th scope="col" v-for="field in fields" :key="field">{{ field }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr scope="row" v-for="(player, index) in players" :key="index">
+          <td>{{ player[0] }}</td>
+          <td>{{ player[1] }}</td>
+          <td>{{ player[2] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { defineProps } from "vue";
 
 const { players } = defineProps(["players"]);
+
+const fields = ["Global Rank", "Nickname", "Rating"];
 </script>
 
 <style scoped>
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-thead tr th {
-  color: black;
+.table {
+  width: 50rem;
+  max-width: 90vw;
 }
 
 th,
 td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+  border: 0.063rem solid #ddd;
 
   color: white;
-}
-
-th {
-  background-color: #f2f2f2;
 }
 </style>
