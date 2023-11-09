@@ -32,13 +32,13 @@ html {
   scroll-behavior: smooth;
   font-size: 2vh;
   overflow-x: auto;
+}
 
-  &::-webkit-scrollbar {
-    background-color: var(--COLOR_HIGHLIGHT_PRIMARY_1);
-  }
-  &::-webkit-scrollbar-thumb {
-    background: var(--COLOR_HIGHLIGHT_PRIMARY_4);
-  }
+html::-webkit-scrollbar {
+  background-color: #698f8e;
+}
+html::-webkit-scrollbar-thumb {
+  background: #b23d3e;
 }
 
 ::selection {
