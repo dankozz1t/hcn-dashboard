@@ -26,6 +26,7 @@ body {
 
   background: url("/public/juggernaut-dota.jpg") no-repeat center center fixed;
   background-size: cover;
+  background-color: #314948;
 }
 
 html {
