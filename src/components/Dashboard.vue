@@ -20,10 +20,16 @@ onMounted(async () => {
 
 <template>
   <div>
-    <h1>Dashboard</h1>
+    <h1 class="title">Dashboard</h1>
 
     <Table v-if="playersData" :players="playersData" />
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+</style>
