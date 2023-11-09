@@ -27,8 +27,8 @@ const fields = ["Global Rank", "Nickname", "Rating"];
 
 <style scoped>
 .table {
-  width: 50rem;
-  max-width: 90vw;
+  width: 50rem * (100vw / 1rem);
+  max-width: 90vw * (100vw / 1rem);
 }
 
 th,

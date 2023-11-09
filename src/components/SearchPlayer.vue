@@ -62,9 +62,8 @@ const onInputSearch = async () => {
 
 <style scoped>
 .search-player {
-  width: 20rem;
-  max-width: 90vw;
-  max-width: 90%;
+  width: 20rem * (100vw / 1rem);
+  max-width: 90vw * (100vw / 1rem);
 
   color: white;
 }
