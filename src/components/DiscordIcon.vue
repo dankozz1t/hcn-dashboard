@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <svg
     width="3.12rem"
@@ -17,10 +19,4 @@
   </svg>
 </template>
 
-<script>
-export default {
-  name: "IconDiscord",
-};
-</script>
-
-<style lang="scss" scoped></style>
+<style scoped></style>

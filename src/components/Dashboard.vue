@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Table from "@/components/Table.vue";
-import IconDiscord from "@/components/icons/IconDiscord.vue";
 import SearchPlayer from "@/components/SearchPlayer.vue";
+import DiscordIcon from "./DiscordIcon.vue";
 import { ref, onMounted } from "vue";
 
 const playersData = ref(null);
@@ -34,7 +34,7 @@ onMounted(async () => {
     <div class="discord">
       <h2 class="discord__title">Join our Discord channel!</h2>
       <a class="discord__link" href="https://discord.gg/7WjykbPG">
-        <IconDiscord />
+        <DiscordIcon />
 
         https://discord.gg/7WjykbPG
       </a>
