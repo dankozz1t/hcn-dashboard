@@ -16,10 +16,7 @@ import DiscordIcon from "./DiscordIcon.vue";
 <style scoped>
 .discord {
   width: 100%;
-  min-width: 18rem;
   max-width: 25rem;
-
-  margin: 0 auto;
 
   padding: 1rem;
 

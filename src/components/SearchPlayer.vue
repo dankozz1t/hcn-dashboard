@@ -23,21 +23,18 @@ const onInputSearch = async () => {
 
 <template>
   <div class="search-player">
-    <div class="input-group search">
+    <form @submit.prevent="onInputSearch" class="input-group search">
       <input
         v-model="search"
         type="text"
         class="form-control"
         aria-label="Text input for search player by nickname"
+        placeholder="Enter your nickname"
       />
-      <button
-        class="btn btn-outline-light"
-        type="button"
-        @click="onInputSearch"
-      >
+      <button class="btn btn-outline-light" type="submit">
         <SearchIcon />
       </button>
-    </div>
+    </form>
 
     <table
       v-if="players?.length > 0"
@@ -78,6 +75,10 @@ td {
 }
 input {
   color: white !important;
+}
+
+input::placeholder {
+  color: #777673;
 }
 
 th,

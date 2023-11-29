@@ -28,7 +28,7 @@ onMounted(async () => {
       <SearchPlayer />
     </div>
 
-    <div>
+    <div class="table-board">
       <h1 class="title">Hardcore Ninja Leaderboard</h1>
       <Table v-if="playersData" :players="playersData" />
     </div>
@@ -40,7 +40,7 @@ onMounted(async () => {
 <style scoped>
 .title {
   text-align: center;
-  font-size: 3.125rem;
+  font-size: 3rem;
   margin-bottom: 1.25rem;
 }
 
@@ -49,6 +49,8 @@ onMounted(async () => {
   justify-content: space-between;
   align-items: flex-start;
   gap: 6rem;
+
+  width: 100%;
 }
 
 .wrapper__hide-mobile {
@@ -56,6 +58,10 @@ onMounted(async () => {
 }
 .wrapper__show-mobile {
   display: none;
+}
+
+.table-board {
+  width: 100%;
 }
 
 @media (max-width: 950px) {
