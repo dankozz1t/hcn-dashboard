@@ -4,7 +4,7 @@
   --text-selection-color: #fafafa;
   --bg-selection-color: #240202;
 
-  --transition-time: 350ms;
+  --transition-time: 200ms;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,8 +13,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
-*,
-body {
+body,
+input,
+th,
+td {
   font-family: var(--main-font);
   position: relative;
 
@@ -27,6 +29,10 @@ body {
   background: url("/public/juggernaut-dota.jpg") no-repeat center center fixed;
   background-size: cover;
   background-color: #314948;
+}
+
+button:hover {
+  background-color: #698f8e !important;
 }
 
 html {

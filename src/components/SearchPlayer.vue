@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SearchIcon from "./SearchIcon.vue";
 
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 
 const players = ref(null);
 const search = ref(null);
