@@ -29,7 +29,7 @@ const onInputSearch = async () => {
         type="text"
         class="form-control"
         aria-label="Text input for search player by nickname"
-        placeholder="Enter your nickname"
+        placeholder="Enter your nickname..."
       />
       <button class="btn btn-outline-light" type="submit">
         <SearchIcon />
@@ -78,7 +78,7 @@ input {
 }
 
 input::placeholder {
-  color: #777673;
+  color: #c4c0b6;
 }
 
 th,

@@ -82,5 +82,13 @@ onMounted(async () => {
   .form-search {
     width: 100%;
   }
+
+  .table-board {
+    width: auto;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
 }
 </style>

@@ -24,14 +24,6 @@ import DiscordIcon from "./DiscordIcon.vue";
   background-color: #698f8e;
 }
 
-@media (max-width: 950px) {
-  .discord {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-  }
-}
-
 .discord__title {
   text-align: center;
   font-size: 1.8rem;
@@ -57,5 +49,16 @@ import DiscordIcon from "./DiscordIcon.vue";
 
 .discord__link:hover svg {
   fill: #b23d3e;
+}
+
+@media (max-width: 950px) {
+  .discord {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .discord__title {
+    font-size: 1.4rem;
+  }
 }
 </style>
