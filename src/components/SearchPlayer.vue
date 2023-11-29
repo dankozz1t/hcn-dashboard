@@ -62,10 +62,15 @@ const onInputSearch = async () => {
 
 <style scoped>
 .search-player {
-  width: 20rem * (100vw / 1rem);
-  max-width: 90vw * (100vw / 1rem);
+  width: 100%;
+  min-width: 18rem;
+  max-width: 25rem;
 
   color: white;
+}
+
+td {
+  overflow-wrap: anywhere;
 }
 
 .search {
@@ -80,5 +85,14 @@ td {
   border: 0.063rem solid #ddd;
 
   color: white;
+}
+
+@media (max-width: 950px) {
+  .search-player {
+    width: 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 </style>

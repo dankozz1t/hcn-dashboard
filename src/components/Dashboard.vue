@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Table from "@/components/Table.vue";
 import SearchPlayer from "@/components/SearchPlayer.vue";
-import DiscordIcon from "./DiscordIcon.vue";
+import LinksPanel from "@/components/LinksPanel.vue";
 import { ref, onMounted } from "vue";
 
 const playersData = ref(null);
@@ -22,6 +22,8 @@ onMounted(async () => {
 
 <template>
   <div class="wrapper">
+    <LinksPanel class="wrapper__show-mobile" />
+
     <div class="form-search">
       <SearchPlayer />
     </div>
@@ -31,14 +33,7 @@ onMounted(async () => {
       <Table v-if="playersData" :players="playersData" />
     </div>
 
-    <div class="discord">
-      <h2 class="discord__title">Join our Discord channel!</h2>
-      <a class="discord__link" href="https://discord.gg/7WjykbPG">
-        <DiscordIcon />
-
-        https://discord.gg/7WjykbPG
-      </a>
-    </div>
+    <LinksPanel class="wrapper__hide-mobile" />
   </div>
 </template>
 
@@ -56,38 +51,11 @@ onMounted(async () => {
   gap: 6rem;
 }
 
-.discord {
-  padding: 1rem;
-
-  border-radius: 0.375rem;
-  background-color: #698f8e;
+.wrapper__hide-mobile {
+  display: block;
 }
-
-.discord__title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.discord__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-
-  color: #314948;
-  transition: color var(--transition-time) ease;
-}
-
-.discord__link:hover {
-  color: #b23d3e;
-}
-.discord__link svg {
-  transition: fill var(--transition-time) ease;
-}
-
-.discord__link:hover svg {
-  fill: #b23d3e;
+.wrapper__show-mobile {
+  display: none;
 }
 
 @media (max-width: 950px) {
@@ -96,6 +64,17 @@ onMounted(async () => {
     align-items: center;
     gap: 2rem;
     margin-left: 0;
+  }
+
+  .wrapper__hide-mobile {
+    display: none;
+  }
+  .wrapper__show-mobile {
+    display: block;
+  }
+
+  .form-search {
+    width: 100%;
   }
 }
 </style>
