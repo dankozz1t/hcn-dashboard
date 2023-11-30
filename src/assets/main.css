@@ -39,6 +39,7 @@ html {
   scroll-behavior: smooth;
   font-size: 2vh;
   overflow-x: auto;
+  overflow-y: scroll;
 }
 
 html::-webkit-scrollbar {
@@ -61,10 +62,30 @@ html::-webkit-scrollbar-thumb {
   font-weight: normal;
 }
 
-#app {
-  display: flex;
-  justify-content: center;
+.hcn-container {
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 950px) {
+  .title {
+    font-size: 1.4rem;
+  }
+}
+
+css .scale-enter-active,
+.scale-leave-active {
+  transition: all 0.5s ease;
+}
+
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
 }
 

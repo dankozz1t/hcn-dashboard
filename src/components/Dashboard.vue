@@ -38,12 +38,6 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.title {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 1.25rem;
-}
-
 .wrapper {
   display: flex;
   justify-content: space-between;
@@ -67,9 +61,13 @@ onMounted(async () => {
 @media (max-width: 950px) {
   .wrapper {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+
     gap: 2rem;
     margin-left: 0;
+
+    max-width: 600px;
   }
 
   .wrapper__hide-mobile {
@@ -85,10 +83,6 @@ onMounted(async () => {
 
   .table-board {
     width: auto;
-  }
-
-  .title {
-    font-size: 1.4rem;
   }
 }
 </style>

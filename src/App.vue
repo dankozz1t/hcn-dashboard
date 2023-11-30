@@ -1,14 +1,49 @@
 <script setup lang="ts">
-import Dashboard from "@/components/Dashboard.vue";
+import Navigation from "./components/Navigation.vue";
 </script>
 
 <template>
-  <Suspense>
-    <Dashboard />
+  <div class="hcn-container">
+    <header class="header">
+      <Navigation />
+    </header>
 
-    <template #fallback> Loading... </template>
-  </Suspense>
+    <main class="main">
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </main>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.header {
+  padding: 1rem 0;
+}
+.main {
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 950px) {
+  .header {
+    padding: 0.5rem 0;
+  }
+  .main {
+    padding: 0.8rem;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 250ms ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
 
