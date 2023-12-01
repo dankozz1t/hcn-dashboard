@@ -1,0 +1,16 @@
+{
+    "about:title": "Битва PvP чистого рефлекса.",
+    "about:description": "У вас только одна жизнь. Если вас чем-то ударили, вы мертвы. Если вы убили кого-то, время восстановления ваших способностей сбрасывается. Первая команда, выигравшая 15 раундов, побеждает. Способности обновляются после каждого убийства.",
+    "about:condition": "Условие победы – убить команду противника 15 раз.",
+    "about:abilities": "СПОСОБНОСТИ",
+    "about:deflect": "DEFLECT",
+    "about:protection": "Защита",
+    "about:deflect:description": "Делает игрока неуязвимым на 0.7 секунды. ",
+    "about:sword-wave": "SWORD WAVE",
+    "about:attack": "Атака",
+    "about:sword-wave:description": "Смертельная ударная волна",
+    "about:dagger-throw": "DAGGER THROW",
+    "about:dagger-throw:description": "Бросает кинжал во врага, сбивается блинком. ",
+    "about:predict-wave": "Предикт вейвом",
+    "about:predict-wave:description": "Предугадывание вражеского блинка"
+}
