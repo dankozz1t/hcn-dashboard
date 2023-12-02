@@ -89,3 +89,10 @@ css .scale-enter-active,
   transform: scale(0.9);
 }
 
+.mt-2 {
+  margin-top: 2rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
