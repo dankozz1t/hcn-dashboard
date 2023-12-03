@@ -101,8 +101,10 @@ ul {
   gap: 0.5rem;
 }
 .ability__spell-img {
+  display: block;
   height: 7rem;
   width: min-content;
+  max-width: min-content;
 }
 
 .ability__spell-hit {
