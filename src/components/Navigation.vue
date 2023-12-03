@@ -30,7 +30,7 @@ import SwitchLanguage from "@/components/SwitchLanguage.vue";
 }
 @media (max-width: 950px) {
   .switch {
-    right: 2rem;
+    right: 1rem;
   }
 }
 
