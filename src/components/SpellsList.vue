@@ -19,7 +19,6 @@ const { abilities } = defineProps(["abilities"]);
           <li v-for="(spell, index) in ability.spells" :key="spell">
             <div class="ability__spell">
               <img
-                loading="lazy"
                 v-if="spell.includes('/')"
                 class="ability__spell-img"
                 :src="spell"
@@ -41,12 +40,7 @@ const { abilities } = defineProps(["abilities"]);
       <p v-if="ability.description">{{ $t(ability.description) }}</p>
 
       <div :class="['ability__demo-box', !ability.demo && 'hide-mobile']">
-        <img
-          loading="lazy"
-          v-if="ability.demo"
-          class="ability__demo"
-          :src="ability.demo"
-        />
+        <img v-if="ability.demo" class="ability__demo" :src="ability.demo" />
       </div>
     </li>
   </ul>
