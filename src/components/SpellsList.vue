@@ -103,8 +103,7 @@ ul {
 .ability__spell-img {
   display: block;
   height: 7rem;
-  width: min-content;
-  max-width: min-content;
+  width: auto;
 }
 
 .ability__spell-hit {
