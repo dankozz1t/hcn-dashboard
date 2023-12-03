@@ -1,5 +1,5 @@
 <template>
-  <div class="language-switcher">
+  <div class="switch">
     <div class="custom-select">
       <p @click="toggleDropdown">
         {{ $t("lang:" + selectedLanguage) }} &#8628;
@@ -41,6 +41,13 @@ const selectLanguage = (language: string) => {
 </script>
 
 <style scoped>
+.switch {
+  transition: color var(--transition-time) ease;
+}
+.switch:hover {
+  color: #b23d3e;
+}
+
 p {
   margin: 0;
 }

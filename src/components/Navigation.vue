@@ -27,11 +27,7 @@ import SwitchLanguage from "@/components/SwitchLanguage.vue";
 .switch {
   position: absolute;
   right: 3rem;
-}
-@media (max-width: 950px) {
-  .switch {
-    right: 1rem;
-  }
+  padding: 0 1rem;
 }
 
 .link {
@@ -57,5 +53,12 @@ import SwitchLanguage from "@/components/SwitchLanguage.vue";
   margin: 0;
 
   list-style: none;
+}
+
+@media (max-width: 950px) {
+  .switch {
+    position: static;
+    right: 1rem;
+  }
 }
 </style>
