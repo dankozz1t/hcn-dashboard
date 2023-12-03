@@ -2,7 +2,7 @@
   <div class="switch">
     <div class="custom-select">
       <p @click="toggleDropdown">
-        {{ $t("lang:" + selectedLanguage) }} &#8628;
+        <span class="lang"> {{ $t("lang:" + selectedLanguage) }}</span> &#8628;
       </p>
 
       <ul class="dropdown" v-if="isDropdownOpen">
@@ -44,8 +44,13 @@ const selectLanguage = (language: string) => {
 .switch {
   transition: color var(--transition-time) ease;
 }
+
 .switch:hover {
   color: #b23d3e;
+}
+
+.lang {
+  text-decoration: underline;
 }
 
 p {
