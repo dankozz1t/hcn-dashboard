@@ -136,8 +136,12 @@ ul {
     width: 100%;
   }
 
+  .ability__spell {
+    gap: 0.2rem;
+  }
+
   .ability__spell-img {
-    height: 5rem;
+    height: 4rem;
   }
 
   .ability__demo {
@@ -145,7 +149,7 @@ ul {
   }
 
   .ability__spell-hit {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .ability__spell-plus {
