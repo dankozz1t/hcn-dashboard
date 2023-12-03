@@ -8,7 +8,7 @@ const { abilities } = defineProps(["abilities"]);
   <ul class="abilities">
     <li class="ability" v-for="ability in abilities" :key="ability.name">
       <div class="ability__top">
-        <div class="ability__box">
+        <div class="ability__box ability__box--between">
           <h2 class="ability__name">{{ $t(ability.name) }}</h2>
           <p v-if="ability.type" class="ability__type">
             {{ $t(ability.type) }}
@@ -39,7 +39,7 @@ const { abilities } = defineProps(["abilities"]);
 
       <p v-if="ability.description">{{ $t(ability.description) }}</p>
 
-      <div class="ability__demo-box">
+      <div :class="['ability__demo-box', !ability.demo && 'hide-mobile']">
         <img v-if="ability.demo" class="ability__demo" :src="ability.demo" />
       </div>
     </li>
@@ -78,25 +78,27 @@ ul {
 .ability__top {
   display: flex;
   flex-direction: column;
-  gap: 1re;
+  gap: 1rem;
+  width: 100%;
 }
 
 .ability__name {
   color: #314948;
   font-size: 2.5rem;
+  font-weight: 800;
 }
 
 .ability__box {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .ability__spell {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .ability__spell-img {
   height: 7rem;
@@ -104,11 +106,13 @@ ul {
 }
 
 .ability__spell-hit {
-  font-size: 3rem;
+  font-size: 4rem;
+  margin: 0;
 }
 
 .ability__spell-plus {
   font-size: 2rem;
+  margin: 0;
 }
 
 .ability__demo {
@@ -126,22 +130,43 @@ ul {
 
 .ability__type {
   width: max-content;
-  padding: 0.4rem 0.9rem;
+  padding: 0.4rem 0.6rem;
   border-radius: 1rem;
   background-color: #b23d3e;
 }
 
 @media (max-width: 950px) {
+  .hide-mobile {
+    display: none;
+  }
+
   .ability {
     width: 100%;
+    align-self: flex-start;
+  }
+
+  .ability__name {
+    font-size: 1.5rem;
   }
 
   .ability__spell {
     gap: 0.2rem;
   }
+  .ability__box {
+    gap: 0.2rem;
+  }
+
+  .ability__box--between {
+    justify-content: space-between;
+    width: 100%;
+  }
 
   .ability__spell-img {
-    height: 4rem;
+    height: 5rem;
+  }
+
+  .ability__demo-box {
+    height: 15rem;
   }
 
   .ability__demo {
