@@ -8,12 +8,12 @@ import ukrainian from "../locales/ukrainian.json";
 const messages: LocaleMessages<{ hello: string }> = {
   en: english,
   ru: russian,
-  uk: ukrainian,
+  ua: ukrainian,
 };
 
 const i18n = createI18n({
   legacy: false,
-  locale: "ru" || (localStorage.getItem("language") as string),
+  locale: (localStorage.getItem("language") || "en") as string,
   fallbackLocale: "en",
   messages,
   globalInjection: true,

@@ -86,7 +86,6 @@ const combinations = ref([
 
 <template>
   <div class="about">
-    <h1 class="title ability__type">DEVELOPMENT IN PROGRESS...</h1>
     <h1 class="title">{{ $t("about:title") }}</h1>
     <p>{{ $t("about:description") }}</p>
     <p>{{ $t("about:condition") }}</p>

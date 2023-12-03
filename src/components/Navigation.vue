@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SwitchLanguage from "@/components/SwitchLanguage.vue";
+</script>
 
 <template>
-  <nav>
+  <nav class="nav">
     <ul class="list">
       <li>
         <RouterLink class="link" to="/"> Leaderboard </RouterLink>
@@ -10,10 +12,28 @@
         <RouterLink class="link" to="/about"> About </RouterLink>
       </li>
     </ul>
+
+    <SwitchLanguage class="switch" />
   </nav>
 </template>
 
 <style scoped>
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch {
+  position: absolute;
+  right: 3rem;
+}
+@media (max-width: 950px) {
+  .switch {
+    right: 2rem;
+  }
+}
+
 .link {
   color: #ffff;
   padding: 0 1rem;

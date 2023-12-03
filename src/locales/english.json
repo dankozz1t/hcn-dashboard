@@ -2,6 +2,7 @@
     "lang:en": "English",
     "lang:ua": "Ukrainian",
     "lang:ru": "Russian",
+    "lang:select": "Select language",
     "about:title": "Pure Reflex PvP Battle.",
     "about:description": "You have only one life. If you get hit, you're dead. If you kill someone, the cooldown of your abilities resets. The first team to win 15 rounds is the victor. Abilities refresh after each kill.",
     "about:condition": "Victory condition – kill the enemy team 15 times.",
