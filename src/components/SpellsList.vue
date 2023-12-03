@@ -58,6 +58,8 @@ ul {
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+
+  max-width: 100%;
 }
 
 .ability {
@@ -112,6 +114,7 @@ ul {
 .ability__demo {
   border-radius: 1rem;
   height: 20rem;
+  object-fit: cover;
 }
 
 .ability__demo-box {
@@ -134,11 +137,19 @@ ul {
   }
 
   .ability__spell-img {
-    height: 6rem;
+    height: 5rem;
   }
 
   .ability__demo {
     width: 100%;
+  }
+
+  .ability__spell-hit {
+    font-size: 2rem;
+  }
+
+  .ability__spell-plus {
+    font-size: 1rem;
   }
 }
 </style>
