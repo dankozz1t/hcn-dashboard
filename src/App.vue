@@ -29,6 +29,8 @@ import Navigation from "./components/Navigation.vue";
 
 @media (max-width: 950px) {
   .header {
+    display: flex;
+    justify-content: center;
     padding: 0.5rem 0;
   }
   .main {
@@ -46,4 +48,3 @@ import Navigation from "./components/Navigation.vue";
   opacity: 0;
 }
 </style>
-
