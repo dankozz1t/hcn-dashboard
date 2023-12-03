@@ -29,7 +29,7 @@ const onInputSearch = async () => {
         type="text"
         class="form-control"
         aria-label="Text input for search player by nickname"
-        placeholder="Enter your nickname..."
+        :placeholder="$t('input-pl')"
       />
       <button class="btn btn-outline-light" type="submit">
         <SearchIcon />

@@ -6,10 +6,10 @@ import SwitchLanguage from "@/components/SwitchLanguage.vue";
   <nav class="nav">
     <ul class="list">
       <li>
-        <RouterLink class="link" to="/"> Leaderboard </RouterLink>
+        <RouterLink class="link" to="/"> {{ $t("leaderboard") }} </RouterLink>
       </li>
       <li>
-        <RouterLink class="link" to="/about"> About </RouterLink>
+        <RouterLink class="link" to="/about"> {{ $t("about") }} </RouterLink>
       </li>
     </ul>
 

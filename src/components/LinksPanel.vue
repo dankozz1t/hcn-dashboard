@@ -4,7 +4,7 @@ import DiscordIcon from "./DiscordIcon.vue";
 
 <template>
   <div class="discord wrapper__hide-mobile">
-    <h2 class="discord__title">Join our Discord channel!</h2>
+    <h2 class="discord__title">{{ $t("discord") }}</h2>
     <a class="discord__link" href="https://discord.gg/7WjykbPG">
       <DiscordIcon />
 

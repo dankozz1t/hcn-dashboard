@@ -19,10 +19,15 @@
 
 <script setup lang="ts">
 import { defineProps } from "vue";
+import i18n from "@/plugins/i18n";
 
 const { players } = defineProps(["players"]);
 
-const fields = ["Global Rank", "Nickname", "Rating"];
+const fields = [
+  i18n.global.messages.value[i18n.global.locale.value]["global-rank"],
+  i18n.global.messages.value[i18n.global.locale.value]["nickname"],
+  i18n.global.messages.value[i18n.global.locale.value]["rating"],
+];
 </script>
 
 <style scoped>

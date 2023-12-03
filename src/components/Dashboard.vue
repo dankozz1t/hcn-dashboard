@@ -29,7 +29,7 @@ onMounted(async () => {
     </div>
 
     <div class="table-board">
-      <h1 class="title">Hardcore Ninja Leaderboard</h1>
+      <h1 class="title">{{ $t("name") }}</h1>
       <Table v-if="playersData" :players="playersData" />
     </div>
 
