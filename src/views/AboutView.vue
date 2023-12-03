@@ -16,12 +16,7 @@ const abilities = ref([
     spells: ["../spells/blink.jpg"],
     demo: "../spells/blink.gif",
   },
-  {
-    name: "about:orb-of-preparation",
-    type: "about:attack",
-    description: "about:orb-of-preparation:description",
-    spells: ["../spells/refresh.jpg"],
-  },
+
   {
     name: "about:sword-wave",
     type: "about:attack",
@@ -35,6 +30,12 @@ const abilities = ref([
     description: "about:dagger-throw:description",
     spells: ["../spells/dagger2.jpg"],
     demo: "../spells/dagger.gif",
+  },
+  {
+    name: "about:orb-of-preparation",
+    type: "about:attack",
+    description: "about:orb-of-preparation:description",
+    spells: ["../spells/refresh.jpg"],
   },
 ]);
 
@@ -52,7 +53,7 @@ const combinations = ref([
   {
     name: "about:wr",
     type: "",
-    spells: ["about:hit", "../spells/dagger2.jpg"],
+    spells: ["../spells/blink.jpg", "../spells/dagger2.jpg"],
     demo: "../spells/WR.gif",
   },
   {
